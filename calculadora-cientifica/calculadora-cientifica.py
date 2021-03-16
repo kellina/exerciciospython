@@ -1,15 +1,15 @@
-# Utilizando Interface Gráfica
 # Exercício 05: Crie uma CALCULADORA CIENTÍFICA:
 # Crie utilizando a parte gráfica e a base da calculadora feita em sala.
-# a) Deve possuir, além das operações aritméticas básicas (adição, # subtração, divisão e multiplicação),
+# Deve possuir, além das operações aritméticas básicas (adição, # subtração, divisão e multiplicação),
 # a possibilidade de calcular raiz quadrada, potenciação de números, funções trigonométricas (seno, cosseno, tangente).
 
-from tkinter import *
+import tkinter as tk
+from tkinter.constants import BOTH, END, GROOVE, LEFT, RIGHT, TRUE
 import tkinter.messagebox
 import math
 from tkinter.font import Font
 
-root = Tk()
+root = tk.Tk()
 root.geometry('650x400+300+300')
 root.title('Calculadora Científica')
 
@@ -294,20 +294,20 @@ def btigual_click(*args):
         tkinter.messagebox.showerror("Value Error", "Verifique seus valores e operadores")
 
 # Label
-data = StringVar()
+data = tk.StringVar()
 myFont = Font(family="Segoe", size=20)
-disp = Entry(root, font=myFont, fg="black", bg="#abbab1", bd=0, justify=RIGHT, insertbackground="#abbab1", cursor="arrow")
+disp = tk.Entry(root, font=myFont, fg="black", bg="#abbab1", bd=0, justify=RIGHT, insertbackground="#abbab1", cursor="arrow")
 disp.focus_set()
 disp.pack(expand=TRUE, fill=BOTH)
 
 
 def gerarBotao(container, text, command):
-    botao = Button(container, text=text, font="Segoe 18", relief=GROOVE, bd=0, command=command, fg="white", bg="#333333", width=3)
+    botao = tk.Button(container, text=text, font="Segoe 18", relief=GROOVE, bd=0, command=command, fg="white", bg="#333333", width=3)
     botao.pack(side=LEFT, expand=TRUE, fill=BOTH)
     return botao
 
 # Botoẽs da linha 1
-fr_linha1 = Frame(root, bg="#f0f0f0")
+fr_linha1 = tk.Frame(root, bg="#f0f0f0")
 fr_linha1.pack(expand=TRUE, fill=BOTH)
 
 bt_pi = gerarBotao(container=fr_linha1, text='π', command=pi_click)
@@ -321,7 +321,7 @@ bt_3 = gerarBotao(container=fr_linha1, text='3', command=bt3_click)
 bt_soma = gerarBotao(container=fr_linha1, text='+', command=btsoma_click)
 
 # Botoẽs da linha 2
-fr_linha2 = Frame(root)
+fr_linha2 = tk.Frame(root)
 fr_linha2.pack(expand=TRUE, fill=BOTH)
 
 bt_e = gerarBotao(container=fr_linha2, text='e', command=expon_click)
@@ -335,7 +335,7 @@ bt_6 = gerarBotao(container=fr_linha2, text='6', command=bt6_click)
 bt_subt = gerarBotao(container=fr_linha2, text='-', command=btsubt_click)
 
 # Botoões da linha 3
-fr_linha3 = Frame(root)
+fr_linha3 = tk.Frame(root)
 fr_linha3.pack(expand=TRUE, fill=BOTH)
 
 bt_conv = gerarBotao(container=fr_linha3, text='Rad', command=conv_click)
@@ -349,7 +349,7 @@ bt_9 = gerarBotao(container=fr_linha3, text='9', command=bt9_click)
 bt_mult = gerarBotao(container=fr_linha3, text='x', command=btmult_click)
 
 # Botões da linha 4
-fr_linha4 = Frame(root)
+fr_linha4 = tk.Frame(root)
 fr_linha4.pack(expand=TRUE, fill=BOTH)
 
 bt_mod = gerarBotao(container=fr_linha4, text='%', command=modulo_click)
