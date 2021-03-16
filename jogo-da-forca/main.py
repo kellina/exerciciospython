@@ -1,4 +1,3 @@
-# Utilizando LAÇOS DE REPETIÇÃO / FUNÇÃO / STRINGS
 # Exercício 01: Criar o “JOGO DA FORCA”:
 # a) Criar uma lista de palavras para o jogo.
 # b) O jogo pergunta um número e assim é escolhido a palavra pelo índice.

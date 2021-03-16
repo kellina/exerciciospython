@@ -1,4 +1,4 @@
-# Exercício 04: Classe “BICHINHO VIRTUAL”
+# “BICHINHO VIRTUAL”
 # Crie uma classe que modele um Tamagotshi (Bichinho Eletrônico):
 # a) Atributos: Nome, Fome, Saúde e Idade
 # OBS: o Humor do nosso tamagushi, este humor é uma combinação entre os atributos Fome e Saúde, ou seja, um campo calculado, 
@@ -7,7 +7,7 @@
 # por quanto tempo ele brinca com o bichinho. Faça com que estes valores afetem quão rapidamente os níveis de fome e tédio caem.
 # d) Crie uma "porta escondida" no programa do bichinho virtual que mostre os valores exatos dos atributos do objeto. 
 # Consiga isto mostrando o objeto quando uma opção secreta, não listada no menu, for informada na escolha do usuário. 
-# Dica: acrescente um método especial str() à classe Bichinho.
+
 from random import randrange
 import threading
 import time
@@ -153,7 +153,7 @@ def main():
         elif escolha == 4:
             meu_bichinho.alterarNome(input('Que nome você que dar ao seu amiguinho? '))
             print('Meu nome é ', meu_bichinho.retornaNome())
-        #opção secreta -> metdodo especial str
+        #opção secreta -> metodo especial str
         elif escolha == 9:
             print(meu_bichinho)
         else:

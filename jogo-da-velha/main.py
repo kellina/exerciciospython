@@ -1,4 +1,4 @@
-# Exercício 02: Criar o jogo “JOGO DA VELHA”
+# Criar o jogo “JOGO DA VELHA”
 # a) Serão dois jogadores
 # b) O jogo pergunta onde você quer jogar e alternar entre os dois jogadores.
 # c) A cada jogada, verifique se a posição esta livre.
